@@ -2,22 +2,18 @@
 
 # This procedure is NOT required on the exam. 
 
-# Use the "dd" command to create an image of the boot dvd
-
+# Use the dd command to create a raw image of the installation media
 example: dd if=/dev/sr* of=/rhel.iso bs=1M
 
-# Make a directory to mount the iso to
-
+# Create a mount point for the ISO
 example: mkdir /repo
 
-# Create a backup of /etc/fstab as a safety measure
-
+# Back up /etc/fstab as a safety measure
 example: cp /etc/fstab /etc/fstab.bak
 
-# Use "echo" and shell redirection ">>" to append a new entry to /etc/fstab
-
+# Add the ISO to /etc/fstab for automatic mounting
+# Use echo with shell redirection to append the mount entry
 example: echo "/rhel.iso /repo iso9660 defaults 0 0" >> /etc/fstab
 
-# Mount the directory 
-
+# Mount all filesystems defined in /etc/fstab
 example: mount -a 
