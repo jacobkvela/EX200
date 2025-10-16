@@ -1,0 +1,23 @@
+# Configuring the Installation Disk as a Repo
+
+# This procedure is NOT required on the exam. 
+
+# Use the "dd" command to create an image of the boot dvd
+
+example: dd if=/dev/sr* of=/rhel.iso bs=1M
+
+# Make a directory to mount the iso to
+
+example: mkdir /repo
+
+# Create a backup of /etc/fstab as a safety measure
+
+example: cp /etc/fstab /etc/fstab.bak
+
+# Use "echo" and shell redirection ">>" to append a new entry to /etc/fstab
+
+example: echo "/rhel.iso /repo iso9660 defaults 0 0" >> /etc/fstab
+
+# Mount the directory 
+
+example: mount -a 
