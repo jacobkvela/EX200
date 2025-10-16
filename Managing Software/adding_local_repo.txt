@@ -1,0 +1,17 @@
+# Configuring Repository Access
+
+# Use "dnf config-manager" to add the newly created local repo
+
+example: dnf config-manager --add-repo="file:///repo/AppSteam
+
+&
+
+example: dnf config-manager --add-repo="file:///repo/BaseOS"
+
+# Check /etc/yum.repos.d
+
+example: ls /etc/yum.repos.d/
+
+# Edit /etc/yum.repos.d/AppStream and /etc/yum.repos.d/BaseOS gpgcheck for local lab
+
+example: gpgcheck=0
