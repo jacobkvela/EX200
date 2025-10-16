@@ -1,0 +1,79 @@
+# Notes of dnf package manager
+
+## BASIC PACKAGE OPERATIONS ##
+
+# Install a package    
+example: sudo dnf install <package>
+
+# Remove a package
+example: sudo dnf remove <package>
+
+# Update all packages  
+example: sudo dnf update
+
+# Update specific pkg  
+example: sudo dnf update <package>
+
+# Downgrade a package  
+example: sudo dnf downgrade <package>
+
+## SEARCH & INFORMATION ##
+
+# Search for a package
+dnf search <keyword>
+
+# Get info about a package
+dnf info <package>
+
+# List available packages
+dnf list available
+
+# List installed packages
+dnf list installed
+
+## REPOSITORY MANAGEMENT ##
+
+# List enabled repos	
+dnf repolist
+
+# List all repos	
+dnf repolist all
+
+# Enable repo temporarily	
+sudo dnf install <pkg> --enablerepo=<id>
+
+#Disable repo temporarily	
+sudo dnf install <pkg> --disablerepo=<id>
+
+## CLEANUP & MAINTENANCE ##
+
+# Clean all caches	
+sudo dnf clean all
+
+# Remove unused dependencies	
+sudo dnf autoremove
+
+## HISORY & ROLLBACKS ##
+
+#Show transaction history	
+dnf history
+
+#Undo a transaction	
+sudo dnf history undo <id>
+
+#Redo a transaction	
+sudo dnf history redo <id>
+
+#Rollback to old state	
+sudo dnf history rollback <id>
+
+## LOCAL RPM FILES ##
+
+#Install a local .rpm
+sudo dnf install ./package.rpm
+
+## CONFIGURATION PATHS ##
+
+/etc/dnf/dnf.conf	| Main DNF config
+
+/etc/yum.repos.d/*.repo	| Repo definitions
