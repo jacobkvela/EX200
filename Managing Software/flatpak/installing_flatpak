@@ -24,4 +24,13 @@ example: cp $XDG_RUNTIME_DIR/containers/auth.json $Home/.config/flatpak/oci-auth
 
 # To add a remote, use "$ flatpak remote-add --if-not-exists fedora oci+https://registry.fedoraproject.org"
 
-# Non-root users can add a remote using  "$ flatpak remote-add --user --if-not-exists fedora oci+https://registry.fedoraproject.org"
+# Non-root users can add a remote using  "$ flatpak remote-add --user --if-not-exists fedora oci+https://registry.fedoraproject.org"
+
+
+## VERIFYING REMOTES ##
+
+# Use "$ flapak remotes --system" to check remotes available to everyone
+
+# The "$ flatpak remotes --user" command will show remotes available to this user only.
+
+# To list applications available in the remote repository, use "$ flatpak remote-ls --app"
