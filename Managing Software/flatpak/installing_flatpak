@@ -1,0 +1,27 @@
+## INSTALLING FLATPAK ##
+
+# Use dnf to install flatpak
+example: dnf install -y flatpak
+
+# After installation, use "$ flatpak --version" to verify the installation
+
+# To get access to the default Flatpak repository, you must authenicate using "$ podman login registry.redhat.io"
+
+# To make the login persisent for the current user, use the following command:
+example: cp $XDG_RUNTIME_DIR/containers/auth.json $Home/.config/flatpak/oci-auth.json
+
+## REMOTES ##
+
+# Flatpak uses remote repositories ("remotes") to install packages.
+
+# Remotes are stored in files in /etc/flatpak/remotes.d/
+
+# Red Hat has its own remote repository, otherwise the repository at https://flathub.org is commonly used.
+
+## USING REMOTES ##
+
+# Use "$ flatpak remotes" to print 
+
+# To add a remote, use "$ flatpak remote-add --if-not-exists fedora oci+https://registry.fedoraproject.org"
+
+# Non-root users can add a remote using  "$ flatpak remote-add --user --if-not-exists fedora oci+https://registry.fedoraproject.org"
