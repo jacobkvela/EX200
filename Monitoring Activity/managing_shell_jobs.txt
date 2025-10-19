@@ -1,0 +1,11 @@
+## MANAGE SHELL JOBS ##
+
+# Use "$ command &" to start a job in the background.
+
+# To move a job to the background
+	# First, stop it with "CTRL+Z"
+	# Next, use "$ bg" to move it to the background
+
+# Use "$ jobs" for a complete overview of running jobs.
+
+# Use "$ fg [n]" to move the last job back to the foreground.
