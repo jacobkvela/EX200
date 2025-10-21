@@ -1,0 +1,18 @@
+## PS COMMAND CHEAT SHEET ##
+
+# Show processes for the current shell/session
+example: "$ ps"	
+
+# Show all processes
+example "$ ps -e" or "$ ps -A"
+
+# Show processes for a specific user
+example: "$ ps -u <user>"
+
+# Show a specific process by PID
+"$ ps -p <PID>"
+
+## TIPS ##
+
+Use "$ ps" with "grep" to find specific processes:
+example: "$ ps aux | grep nginx"
