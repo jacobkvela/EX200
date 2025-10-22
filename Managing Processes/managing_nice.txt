@@ -1,0 +1,14 @@
+## MANAGING NICE ##
+
+# If no spcific Cgroups are defined, Linux "nice" and "renice" can be used to define CPU priority.
+
+# To change priorities of non-realtime processes, the "nice" and "renice" commands can be used.
+
+# Nice values range from -20 up to 19.
+
+# Negative "nice" values indicates an increased priority, a positive "nice" value indicates decreased priority.
+
+# Users can set their process to a lower priority; to increase priority users need root access.
+	* example: "$ nice -n 19 dd if=/dev/zero of=dev/null"
+
+# Priority is always relative to other processes.
