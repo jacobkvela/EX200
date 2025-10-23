@@ -1,0 +1,35 @@
+## SYSTEMd  ##
+
+# UNDERSTANDING SYSTEMd UNITS 
+
+# Systemd is started as the first process after loading the kernel and is the manager of everything.
+
+# The items started and managed by Systemd are referred to as units.
+
+# "$ systemctl" is the main management tool for Systemd.
+
+# Use "$ systemctl -t help" for an overview of units that are available.
+
+# For an overview of all units that Systemd starts, use "$ systemctl list-units".
+
+# UNDERSTANDING UNIT TYPES 
+
+# Service units are used to start processes.
+
+# Socket units monitor activity on a port and start the corresponding service unit when needed.
+
+# Timer units are used to start services periodically. 
+
+# Path units can start service units when activity is detected in the file system.
+
+# Mount units are used to mount file systems
+
+# Other types are available, though less relevant for the RHCSA.
+
+# UNDERSTANDING SERVICE UNITS
+
+# Service units are often used to start daemon processes.
+
+# Other types of service units are available as well,
+	* "Type=simple" can be used to start any command through Systemd.
+
