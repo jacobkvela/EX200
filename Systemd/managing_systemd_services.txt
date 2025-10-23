@@ -1,3 +1,13 @@
 ## MANAGING SYSTEMd SERVICES ##
 
+# Use "$ systemctl status" to get current status
 
+# "$ systemctl start" will start a unit that is not currently active.
+
+# "$ systemctl stop" will stop the unit.
+
+# "$ systemctl enable --now" is used to flag the unit for automatic starting upon system start. 
+
+# "$ systemctl disable --now" is used to flag the unit to be no longer automatically started.
+
+# "$ systemctl restart" restarts the unit, which is useful to have a service pick up changed configuration.

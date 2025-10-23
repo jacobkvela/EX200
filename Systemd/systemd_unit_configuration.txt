@@ -1,0 +1,16 @@
+## SYSTEMd UNIT CONFIGURATION ##
+
+# Default system-provided Systemd unit files are in /usr/lib/systemd/system.
+	* hint: DO NOT EDIT 
+
+# Custom units are files in /etc/systemd/system.
+
+# Run-time automatically-generated unit files are in /run/systemd.
+
+# When modifying a unit file, do NOT edit files in /usr/lib/systemd/system instead create custom files in /etc/systemd/system 
+
+# Use "$ systemctl edit unit.service to edit unit files.
+
+# Use "$ systemctl show" to show available parameters.
+
+# HINT: "$ man systemd.directives" to show man pages for unit parameters
