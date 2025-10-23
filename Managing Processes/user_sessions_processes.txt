@@ -1,0 +1,19 @@
+## MANAGING USER SESSIONS AND PROCESSES ##
+
+# COMMON UTILITIES
+
+# "$ ps -u username" to show processes owned by a specific user. 
+
+# "$ pkill -u username" to remove processes owned by a specific user.
+
+# LOGINCTL 
+
+# "loginctl" is a part of Systemd, which manages users and sessions.
+
+# One user can have multiple sessions open simultaneously
+
+# "$ loginctl list-users" and "$ loginctl list-sessions" shows users and sessions.
+
+# "$ loginctl user-status <UID>" shows a tree of processes currently opened by the user.
+
+# "$ loginctl terminate-session" and "$ loginctl terminate-user" can be used to stop current sessions or users.
