@@ -1,3 +1,42 @@
 ## SCHEDULING TASKS WITH SYSTEMd TIMERS ##
 
+# UNDERSTANDING SYSTEMd TIMERS 
 
+# Systemd provies unit.timers files that go together with unit.service files to schedule the service file.
+
+# When using systemd timers, the timer should be enabled/started, and NOT the service unit.
+
+# Systemd timers are often installed from RPM packages.
+
+# In the timer unit file, the "OnCalendar" option specifies when the service should be started.
+
+# Since RHEL 9, systemd timers are the default way for scheduling recurring services.
+
+# Systemd provides several simple presets you can use directly:
+
+# Every minute
+	example: OnCalendar=minutely
+
+# Every hour
+	example: OnCalendar=hourly
+	
+# Every day at midnight
+	example: OnCalender=daily
+
+# Every Monday at 00:00
+	example: OnCalendar=weekly
+
+# Every first day of the month at 00:00
+	example: OnCalendar=monthly
+
+# January 1st at 00:00
+	example: OnCalendar=yearly / annually 
+
+# The first day of January, April, July, October at 00:00
+	example: OnCalendar=quarterly
+
+# Use "OnUnitActivateSec" to start the unit at a specific time after the unit was last activated.
+
+# Use "OnBootSec" or "OnStartUpSec" to start the unit at a specific time after system boot.
+
+# Read "man 7 systemd.time" for specification of the time format to be used.
