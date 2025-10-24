@@ -1,0 +1,9 @@
+## MASKING SERVICES ##
+
+# Some units cannot work simultaneously on the same system.
+
+# To prevent administrators from accidentally starting these units, use "$ systemctl mask" 
+
+# "$ systemctl mask" links a unit to the /dev/null device, which ensures it cannot be started.
+
+# "$ systemctl unmask" removes the unit mask"
