@@ -1,0 +1,38 @@
+## UNDERSTANDING CRON ##
+
+# Cron uses "crond", a daemon that checks its configuration to run cron jobs periodically.
+
+# On RHEL 10, "crond" is enabled as a systemd service by default.
+
+# Most services that need scheduling are scheduled through systemd timers.
+
+# The "crond" process checks it configuration every minute.
+
+# "/etc/crontab/" is the main (managed) configuration file.
+
+# "/etc/crontab.d/" can be used for drop-in files.
+
+# "/etc/cron.{hourly,daily,weekly,monthly}" can be used as a drop-in for scripts that need to be scheduled on a regular basis.
+	* Ensure that scripts have the execute bit set
+
+# User-specific cron jobs can be created using "$ crontab -e"
+
+# UNDERSTANDING CRON TIME SPECIFICATION
+
+# Cron time specifications are specified as minute, hour, day of month, day of week. 
+
+# "0 * * jan 1-5" will run a cron job every Monday through Friday on minute zero in January.
+
+# The /etc/crontab file contains a syntax example.
+
+# DO NOT EDIT /etc/crontab, instead put drop-in files in /etc/crontab.d 
+
+# UNDERSTANDING ANACRON
+
+# "anacron" is the service behind "cron" that ensures that jobs are executed on a regular basis, but not at a specific time.
+
+# "anacron" takes care of jobs in /etc/cron.{hourly,daily,weekly,monthly}.
+
+# Configuration is in /etc/anacrontab.
+
+# HINT: Do not use "anacron", instead use systemd timers.

@@ -40,3 +40,12 @@
 # Use "OnBootSec" or "OnStartUpSec" to start the unit at a specific time after system boot.
 
 # Read "man 7 systemd.time" for specification of the time format to be used.
+
+# EDITING SYSTEMd TIMERS (AND OTHER UNITS)
+
+# To verify current settings, use "$ systemctl cat unit.type"
+
+# To edit settings, use "$ systemctl edit unit.type"
+	* This will create a drop-in file in /etc/systemd/system/unit.type.d/
+
+# To ensure that systemd loads the changes, use "$ systemctl daemon-reload"
