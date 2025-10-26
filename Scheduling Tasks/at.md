@@ -17,18 +17,6 @@ The **`atd`** service must be running to process these scheduled jobs.
 
 ---
 
-## 🧩 Install and Manage `atd`
-
-### 🛠️ Install `at`
-
-Depending on your Linux distribution:
-
-**Debian/Ubuntu:**
-```bash
-sudo apt update
-sudo apt install at
-sudo dnf install at
-
 # Enable and start the service
 sudo systemctl enable atd
 sudo systemctl start atd
