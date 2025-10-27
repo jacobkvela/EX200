@@ -1,0 +1,32 @@
+## MANAGING TMP FILES ##
+
+# In the past, temporary files were created in the /tmp directory.
+
+# Without management, these files could stay around for a long time.
+
+# As a solution, the /tmp directory coule b ecreated on a RAM drive.
+
+# Nowadays, "systemd-tmpfiles" is started while booting, and manages temporary files and directories.
+
+# Functionality has been expanded to manage other files also.
+
+# It will create and delete tmp files automatically, according to the configuration files in the following locations:
+	* /usr/lib/tmpfiles.d/
+	* /etc/tmpfiles.d/
+	* /run/tmpfiles.d/
+
+# UNDERSTATIND "systemd-tmpfiles"
+
+# "systemd-tmpfiles" works with related services to manage temporary files.
+
+# "systemd-tempfiles-setup.service" creates and removes temporary files according to the configuration.
+
+# "systemd-tmpfiles-clean.timer" calls the "systemd-tmpfiles-clean.service" to remove temporary files.
+	* By default 15 minutes after booting
+	* And also on a daily basis
+
+# In the configuration files /usr/lib/tmpfiles.d/ and /etc/tmpfiles.d/, specify what to do with temporary files.
+	* "$ d /run/myfiles 0750 root root -" will create the directory /run/myfiles if necessary. No action if it already exists.
+	* "$ D /run/myfiles 0750 root root 1d" will create the directory if necessary, and wipe its contents if it already exists. Files older than 1 day are eligible for automatic removal the next time systemd-tmpfiles runs.
+
+# "$ man tmpfiles.d" provides detailed information and examples.
