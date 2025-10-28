@@ -1,0 +1,43 @@
+ ## LOGGING OPTIONS ##
+
+# systemd-journald is receiving log messages from different locations:
+	* The kernel
+	* Early boot procedure
+	* Syslog events
+	* Standard output and error from daemons
+
+# The systemd journal is non-persistent by default
+
+# The "rsyslog" service reads syslog messages and writes them to different locations:
+	* Files in /var/log
+	* According to output modules
+
+# Services may also write to /var/log.
+
+# VIEWING SYSTEMd JOURNAL MESSAGES
+
+# "$ systemctl status name.unit" provides easy access tp the last messages that have been logged for a specific service.
+
+# "$ journalctl" prints the entire journal.
+	* Important messages are shown in red.
+
+# "$ journalctl -p err" shows only messages with priority error and higher.
+
+# "$ journalctl -f" shows the last 10 lines, and adds new messages while they are added.
+
+# "$ journalctl -u name.service" shows messages from name.service only.
+
+# "$ journalctl --since "-1 hour"; "$ journalctl --since today" allows time specification.
+
+# "$ journalctl -o verbose" adds verbose messages.
+
+# VIEWING BOOT LOGS
+
+# "$ journalctl -b" shows the current boot log. 
+
+# "$ journalctl -xb" adds explanation texts to the boot log messages.
+
+# "$ journalctl --list-boots" shows all boots that have been logged (on persisent journal only).
+
+# "$ journalctl -b 3" shows messages from the third boot log only.
+

@@ -1,0 +1,29 @@
+## PERSERVING THE SYSTEMd JOURNAL ##
+
+# Systemd journal settings are in /usr/lib/systemd/journal.conf.
+
+# The setting "Storage=auto" ensures that persistent storage is happening automatically after creating the directory /var/log/journal.
+
+# Other options are:
+	* "persistent": stores journals in /var/log/journal.
+	* "volatile": stores journals in the temporary /run/log/journal directory.
+	* "none": doesn't use any storage for the journal at all.
+
+# MANAGING PERSISTENT JOURNAL SIZE 
+
+# In "journal.conf", default settings apply to ensure that the journal can't grow in an unlimitied way,
+	* Log rotation triggers monthly
+	* No more than 10& of the file system size can be used
+	* No more than 15% of the file system free size can be used
+
+# Use "journalctl | grep -E 'Runtime Journal | System Journal' to check current settings"
+
+# DEMO: MAKING THE JOURNAL PERSISTENT
+
+# "$ grep 'Storage=' /usr/lib/systemd/journal.conf"
+
+# "$ mkdir /var/log/journal"
+
+# "$ systemctl restart systemd-journal-flush.service"
+
+# "$ ls /var/log/journal"
