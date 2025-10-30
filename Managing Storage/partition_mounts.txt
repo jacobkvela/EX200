@@ -1,0 +1,45 @@
+## UNDERSTANDING DISK LAYOUT ##
+
+# Disk Layout
+
+# From the UEFI, the boot disk is assigned.
+
+# On the boot disk, the first 1MiB is reserved for metadata.
+
+# Historically, the Master Boot Record (MBR) is the first 512-byte sector and was used for booting.
+
+# Nowadays, the firmware addresses the UEFI boot partition, and the MBR only contains the protective MBR.
+
+# The protective MBR is for legacy applications and indicates that the disk is in use.
+
+# Starting the second sector, the partition table is stored.
+
+# Each partition entry needs 128-bytes, and with a total of 128 partitions that can be created, 32 sectors (16KiB) are used for storing the partition table.
+
+# PARTITIONS 
+
+# Partitions are the primary entities to allocate disk space.
+
+# Each RHEL system must have partitions, as the UEFI boot partition is required in the boot procedure.
+
+# Even if your server uses Logical Volume Manager (LVM), partitions are still required.
+
+# Partitions have been around since the introduction of the PC in 1981.
+
+# On each partition a filesystem is created to organize file storage.
+
+# On Linux servers, it is common to work with multiple partitions to separate different types of files.
+
+# Because they offer additional flexibility, local volumes may be used in addition to partitions.
+
+# MANAGING PARTITIONS
+
+# In most cases, partitions are created while installing a server, and different storage areas are mounted:
+	* /boot/efi
+	* /boot
+	* /
+	* /home (optional)
+	* /var (optional)
+	* swap space
+
+# If additional disk devices are added later, or if virtual disks are increased in size, it might be required to manage partitions.
