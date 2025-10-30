@@ -1,3 +1,24 @@
 ## LINUX BLOCK DEVICES ##
 
-#
+# Depending on the driver that is used, different block devices may occur.
+
+# Use "$ lsblk" to get an overview of currently existing devices. 
+
+# /dev/nvmexny is used for NVME devices.
+
+# /dev/sd(x) is common for SCSI and SATA disks.
+
+# /dev/vd(x) is used in KVM virtual machines.
+
+# UNDERSTANDING PARTITION NUMBERING
+
+# On "sd" and "vd" devices, partitions are numbered in order:
+	* /dev/sda2 is the second parition on first hard disk.
+	* /dev/sba1 is the first partition on the second hard disk.
+
+# On nvme devices, partition names are appended to the device name:
+	* /dev/nvme0n1p1 is the first partition on the first hard disk.
+	* /dev/nvme0n3p2 is the second partition on the third hard disk.
+
+# Use "$ lsblk" to avoid confusion!
+	* "$ lsblk" reads the kernel partition table in /proc/partitions.

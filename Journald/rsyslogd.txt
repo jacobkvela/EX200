@@ -20,5 +20,3 @@
 # In syslog, a fixed number of facilities was defined, like kern, authpriv, cron, and more.
 
 # To work with services that don't have their own facility local{0..7} can be used.
-
-# 

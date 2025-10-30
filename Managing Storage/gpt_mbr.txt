@@ -1,0 +1,13 @@
+## UNDERSTANDING GTP AND MBR PARTITIONS
+
+# Master Boot Record (MBR) is part of the 1981 PC specification
+	* 512-bytes to store boot information
+	* of which 64-bytes to store partitions
+	* Place for 4 partitions only with a max size of 2TiB
+	* To use more partitions, extended and logical partitions must be used
+	* On modern systems, there is no more need to use MBR anymore
+
+# GUID Partition Table (GPT) was introduced in 2010 to overcome MBR limitations
+	* More space to store partitions (32 sectores instead of 64-bytes)
+	* 128 partitions max
+	* Addresses disks bigger than 2TiB (8Zib max - approx. 9 billion GiB)
