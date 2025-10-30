@@ -1,0 +1,9 @@
+## UNDERSTANDING LOGROTATE ##
+
+#  The "logrotate" command is started by a systemd timer to prevent log files from growing too big.
+
+# After rotation, the file is renamed to a file with the rotation date as extension.
+
+# When too many files are rotated, according to the settings, the oldest file will be discarded. 
+
+# Log rotation is configured in files in /etc/logrotate.conf and /etc/logrotate.d/.
