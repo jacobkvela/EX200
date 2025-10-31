@@ -1,3 +1,26 @@
 ## PARTITIONING TOOLS ##
 
-# "$ fdisk" 
+# "$ fdisk" is the recommended utility and has been around since the earliest Linux versions.
+	* Offers easy access to advanced features
+	* Completely reworked to support MBR and GPT partitions
+	* On new disks, create a GPT partition table using "g"; it creates a MBR partition table by default
+
+# "$ gdisk" was introduced to offer GPT support but is no longer installed by default.
+
+# "$ parted" was introduced to make partitioning easier.
+	* Can be easily scripted
+
+# PARTITION TYPES
+
+# A partition type is a low-level identifier of the operating system, filesystem, and boot manager using a specific partition.
+
+# Partition types were important in the past, currently partitions will work if wrong parition type is set.
+	* In "$ fdisk", use "t" to change the parition type.
+
+# Use Aliases to set the appropriate partition type:
+	* Linux: standard linux
+	* Swap: linux swap
+	* UEFI: uefi boot
+	* LVM: logical volume manager
+
+# Other partition types are available, use "l" for a list. 
