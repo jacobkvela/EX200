@@ -1,0 +1,13 @@
+## MOUNTING FILESYSTEMS ##
+
+# After making the filesystem, you can mount it in runtime using the "$ mount" command.
+	* "$ mount /dev/nvme0n1p4 /mnt"
+
+# Use "$ umount" before disconnecting a device.
+	* Use "$ lsof /mnt" if you get an error about open files.
+
+# The "$ mount" command shows all mounted filesystems, including administrative kernel mounts.
+
+# The "$ findmnt" command shows which filesystem is mounted where in the directory structure.
+
+# "$ lsblk" is probably the easiest tool to get an overview of which partitions are mounted where.

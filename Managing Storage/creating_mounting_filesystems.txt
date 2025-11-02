@@ -1,0 +1,29 @@
+## CREATING AND MOUNTING FILESYSTEMS ##
+
+# XFS is the default filesystem
+	* Fast and scalable 
+	* Uses CoW to guarantee data integrity
+	* Size can be increased, not decreased
+
+# Ext4 was default in RHEL 6 and is still available
+	* Backwards compatible to Ext2
+	* Uses journal to guarantee data integrity
+	* Size can be increased and decreased 
+
+# vfat offers multi-OS support
+	* Used for shared devices and UEFI partition
+
+# Btrfs is a new and advanced filesystem
+	* Considered not stable enough by Red Hat 
+
+# CREATING FILESYSTEMS
+
+# "$ mkfs.xfs" creates an XFS filesystem.
+
+# "$ mkfs.ext4" creates an Ext4 filesystem.
+
+# "$ mkfs.vfat" creates a vfat filesystem.
+
+# "$ mkfs.[Tab][Tab]" to show a list of available filesystems.
+
+# Do NOT use "$ mkfs" as it will create an Ext2 filesystem!

@@ -1,0 +1,16 @@
+## UNDERSTANDING /ETC/FSTAB ##
+
+# /etc/fstab is the main configuration file to persistently mount partitions
+	* /dev/nvme0n1p4	/data	ext4	defaults 0 0
+
+# /etc/fstab content is used to generate systemd mounts by the "systemd-fstab-generator" utility.
+
+# To update systemd mounts, it is recommended to use "$ systemctl daemod-reload" after editing /etc/fstab.
+
+# AVOIDING PROBLEMS WHILE BOOTING
+
+# If an error was found in /etc/fstab, your system will drop a troubleshooting shell while booting.
+
+# After adding lines to /etc/fstab, use "$ mount -a" to mount all that hasn't been mounted yet.
+
+# Alternatively, use "$ findmnt --verify" to verify syntax.
