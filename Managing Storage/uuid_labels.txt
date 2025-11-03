@@ -1,10 +1,10 @@
-## UUID AND LABLES ##
+## UUID AND LABELS ##
 
 # In datacenters environments, block device names may change. Different solutions exist for persistent naming.
 
 # UUID: a UUID is automatically generated for each device that contains a filesystem or anything similar.
 
-# Lable: while creating the filesystem, the option "-L" can be used to set an arbitary name that can be used for mounting the filesystem.
+# Labels: while creating the filesystem, the option "-L" can be used to set an arbitary name that can be used for mounting the filesystem.
 
 # Unique device names are created in /dev/disk/*
 
