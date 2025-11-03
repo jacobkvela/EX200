@@ -1,0 +1,19 @@
+## UUID AND LABLES ##
+
+# In datacenters environments, block device names may change. Different solutions exist for persistent naming.
+
+# UUID: a UUID is automatically generated for each device that contains a filesystem or anything similar.
+
+# Lable: while creating the filesystem, the option "-L" can be used to set an arbitary name that can be used for mounting the filesystem.
+
+# Unique device names are created in /dev/disk/*
+
+# MANAGING PERSISTENT NAMING ATTRIBUTES
+
+# "$ blkid" shows all devices with their naming attributes
+
+# "$ tune2fs -L" is used to set a label on an EXT filesystem.
+
+# "$ xfs_admin -L" is used to set a label on an XFS filesystem.
+
+# "$ mkfs.* -L" is used to set a label while creating the filesystem.
