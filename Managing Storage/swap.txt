@@ -1,3 +1,17 @@
 ## MANAGING SWAP ##
 
+# Swap is RAM that is emulated on disk.
+
+# All Linux systems should have at least some swap.
+	* If there is a memory shortage, unused application memory can be moved to swap
+	* The amount of swap depends on the use of the sever.
+
+# Swap can be recreated on any block device, including swap files.
+
+# Set partition type to linux-swap.
+
+# After creating the swap partition, use "$ mkswap" to create the swap filesystem.
+
+# Activate swap using "$ swapon" 
+
 
