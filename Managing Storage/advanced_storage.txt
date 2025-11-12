@@ -1,0 +1,9 @@
+## RHEL ADVANCED STORAGE SOLUTIONS ##	
+
+# LVM Logical Volumes
+	* Used during default installation of RHEL since 1990s
+	* Adds flexibility to storage (resize, snapshots, and more)
+
+# Stratis
+	* Next generation Volume Manager Filesystem that uses thin provisioning by default
+	* Implemented in user space, which makes API access possbile

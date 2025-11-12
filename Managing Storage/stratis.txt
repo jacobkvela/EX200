@@ -1,0 +1,35 @@
+## UNDERSTANDING STRATIS ##
+
+# Stratis is adding volume management capacities as a seperate layer to the XFS filesystem.
+
+# Stratis volumes always use the XFS filesystem.
+
+# Stratis volumes are thin provisioned by nature.
+
+# Volume storage is allocated from the stratis pool.
+
+# Each stratis volume needs a minimal size of 4GiB.
+
+# Because of the thin provisioning, stratis tools must be used to monitor available storage space.
+
+# MANAGING STRATIS 
+
+# To work with stratism you'll need the "stratisd" and "stratis-cli" packages.
+
+# Use the "$ stratis" command to create pools and filesystems.
+
+# This command has awesome tab completion.
+
+# While working with stratis, use "$ stratis pool list" to ensure the pool has sufficient space remaining.
+
+# To mount stratis volumes:
+	* Use UUID
+	* Include "x-systemd.requires=stratis.service" as a mount option.
+
+# UNDERSTANDING STRATIS SNAPSHOTS
+
+# A stratis snapshot is a metadata copy that allows you to access the state of the snapshot at any time.
+
+# A snapshot is NOT a backup, but can be helpful in accessing deleted files.
+
+# A snapshot is mounted by its device name, not by UUID.
