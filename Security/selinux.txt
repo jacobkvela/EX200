@@ -1,0 +1,19 @@
+## SECURING RHEL WITH SELINUX ##
+
+# Understanding the Need for SELinux
+
+# Linux security is built on UNIX security 
+
+# UNIX security consists of different solutions that were never developed with current IT security needs in mind.
+
+# Most of these solutions focux on a part of the operating system.
+
+# SELinux provides a complete and mandatory security solution. 
+
+# The principle is that if it is not specifically allowed, it will be denied.
+
+# As a result, "unknown" services will always need additional configuration to enable them in an environment where SELinux is enabled. 
+
+# Known services work well with the standard SELinux configuration.
+
+
